@@ -3,9 +3,9 @@ def process_input(data):
         word_length = sum(len(word) for word in data)
         return f"Длина всех слов в кортеже: {word_length}"
     elif isinstance(data, list):
-        letter_count = sum(1 for item in data if isinstance(item, str) and item.isalpha())
+        words_count = sum(1 for item in data if isinstance(item, str) and item.isalpha())
         digit_count = sum(1 for item in data if isinstance(item, int))
-        return f"Количество букв: {letter_count}, Количество чисел: {digit_count}"
+        return f"Количество слов: {words_count}, Количество чисел: {digit_count}"
     elif isinstance(data, int):
         digit_count = sum(1 for digit in str(data) if int(digit) % 2 != 0)
         return f"Количество нечётных цифр: {digit_count}"
